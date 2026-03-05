@@ -1,0 +1,26 @@
+[
+  {
+    "career": "Data Scientist",
+    "skills": ["Python", "Machine Learning", "Statistics"],
+    "interest": "AI",
+    "performance": "High"
+  },
+  {
+    "career": "Web Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React"],
+    "interest": "Web",
+    "performance": "Medium"
+  },
+  {
+    "career": "Cybersecurity Analyst",
+    "skills": ["Networking", "Security", "Linux"],
+    "interest": "Security",
+    "performance": "High"
+  },
+  {
+    "career": "Software Developer",
+    "skills": ["Java", "DSA", "Problem Solving"],
+    "interest": "Programming",
+    "performance": "Medium"
+  }
+]
