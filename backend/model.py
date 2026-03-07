@@ -1,17 +1,14 @@
 import json
 
+with open("careers.json") as f:
+    careers = json.load(f)
+
 def recommend_career(interest, performance):
 
-    with open("careers.json") as f:
-        careers = json.load(f)
-
-    results = []
-
-    for career in careers:
-        if (
-            career["interest"].lower() == interest.lower()
-            and career["performance"].lower() == performance.lower()
-        ):
-            results.append(career)
-
+    results = [
+    career for career in careers
+    if career["interest"].lower() == interest.lower()
+    and career["performance"].lower() == performance.lower()
+]
+    
     return results
