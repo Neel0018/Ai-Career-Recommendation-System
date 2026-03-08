@@ -6,6 +6,7 @@ function App() {
   const [performance, setPerformance] = useState("");
   const [careers, setCareers] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [searched, setSearched]=useState(false);
 
   const getCareer = async () => {
     // Basic validation
@@ -15,6 +16,7 @@ function App() {
     }
 
     setLoading(true);
+    setSearched(true);
     try {
       const res = await axios.post("http://127.0.0.1:5000/recommend", {
         interest,
@@ -89,6 +91,12 @@ function App() {
         </div>
 
         {/* Result Section */}
+        {searched && !loading && careers.length === 0 && (
+  <p className="text-center text-gray-500 mt-6">
+    No matching career found.
+  </p>
+)}
+
         {careers.length > 0 && (
           <div className="mt-10 mb-10">
             <h3 className="text-2xl font-bold mb-6 text-gray-700">
