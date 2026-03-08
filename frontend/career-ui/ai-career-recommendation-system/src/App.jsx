@@ -7,10 +7,12 @@ function App() {
   const [careers, setCareers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched]=useState(false);
+  const [skills, setSkills] = useState("");
+  const [academicScore, setAcademicScore] = useState("");
 
   const getCareer = async () => {
     // Basic validation
-    if (!interest || !performance) {
+    if (!interest || !performance || !skills || !academicScore) {
       alert("Please select both an interest and a performance level.");
       return;
     }
@@ -21,6 +23,8 @@ function App() {
       const res = await axios.post("http://127.0.0.1:5000/recommend", {
         interest,
         performance,
+        academic_score: Number(academicScore),
+        skills: skills.split(',').map((s) => s.trim()),
       });
       setCareers(res.data);
     } catch (error) {
@@ -68,6 +72,8 @@ function App() {
               <option value="Web">Web</option>
               <option value="Security">Security</option>
               <option value="Programming">Programming</option>
+              <option value="Data">Data</option>
+              <option value="Cloud">Cloud</option>
             </select>
 
             <select
@@ -79,6 +85,21 @@ function App() {
               <option value="High">High</option>
               <option value="Medium">Medium</option>
             </select>
+            <input
+              type="text"
+              placeholder="Enter skills (comma separated)"
+              className="p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              value={skills}
+              onChange={(e) => setSkills(e.target.value)}
+            />
+            <input
+              type="number"
+              placeholder="Enter academic score (%)"
+              className="p-3 border border-gray-300 rounded-lg w-full"
+              value={academicScore}
+              onChange={(e) => setAcademicScore(e.target.value)}
+            />
+
           </div>
 
           <button
