@@ -3,24 +3,105 @@
     "career": "Data Scientist",
     "skills": ["Python", "Machine Learning", "Statistics"],
     "interest": "AI",
-    "performance": "High"
+    "performance": "High",
+    "min_score": 75
+  },
+  {
+    "career": "Machine Learning Engineer",
+    "skills": ["Python", "TensorFlow", "Deep Learning"],
+    "interest": "AI",
+    "performance": "High",
+    "min_score": 80
+  },
+  {
+    "career": "AI Researcher",
+    "skills": ["Python", "Mathematics", "Deep Learning"],
+    "interest": "AI",
+    "performance": "High",
+    "min_score": 85
   },
   {
     "career": "Web Developer",
     "skills": ["HTML", "CSS", "JavaScript", "React"],
     "interest": "Web",
-    "performance": "Medium"
+    "performance": "Medium",
+    "min_score": 60
+  },
+  {
+    "career": "Frontend Developer",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "interest": "Web",
+    "performance": "Medium",
+    "min_score": 60
+  },
+  {
+    "career": "Backend Developer",
+    "skills": ["Python", "NodeJS", "Databases"],
+    "interest": "Programming",
+    "performance": "Medium",
+    "min_score": 65
   },
   {
     "career": "Cybersecurity Analyst",
-    "skills": ["Networking", "Security", "Linux"],
+    "skills": ["Networking", "Linux", "Security"],
     "interest": "Security",
-    "performance": "High"
+    "performance": "High",
+    "min_score": 70
+  },
+  {
+    "career": "Ethical Hacker",
+    "skills": ["Networking", "Penetration Testing", "Linux"],
+    "interest": "Security",
+    "performance": "High",
+    "min_score": 70
   },
   {
     "career": "Software Developer",
     "skills": ["Java", "DSA", "Problem Solving"],
     "interest": "Programming",
-    "performance": "Medium"
+    "performance": "Medium",
+    "min_score": 65
+  },
+  {
+    "career": "Game Developer",
+    "skills": ["C++", "Unity", "Game Design"],
+    "interest": "Programming",
+    "performance": "Medium",
+    "min_score": 65
+  },
+  {
+    "career": "Cloud Engineer",
+    "skills": ["AWS", "Linux", "Networking"],
+    "interest": "Cloud",
+    "performance": "High",
+    "min_score": 70
+  },
+  {
+    "career": "DevOps Engineer",
+    "skills": ["Docker", "Linux", "CI/CD"],
+    "interest": "Cloud",
+    "performance": "High",
+    "min_score": 70
+  },
+  {
+    "career": "Data Analyst",
+    "skills": ["Excel", "SQL", "Python"],
+    "interest": "Data",
+    "performance": "Medium",
+    "min_score": 60
+  },
+  {
+    "career": "Business Analyst",
+    "skills": ["Excel", "SQL", "Communication"],
+    "interest": "Data",
+    "performance": "Medium",
+    "min_score": 60
+  },
+  {
+  "career": "Mobile App Developer",
+  "skills": ["Java", "Kotlin", "Android Development", "Flutter"],
+  "interest": "Programming",
+  "performance": "Medium",
+  "min_score": 65
   }
 ]
