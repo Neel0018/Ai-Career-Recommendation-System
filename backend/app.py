@@ -10,18 +10,18 @@ def recommend():
 
     data = request.json
 
-    if not data:
-        return jsonify([])
+    interest = data.get("interest", "")
+    skills = data.get("skills", [])
+    academic_score = data.get("academic_score", 0)
+    performance = data.get("performance", "")
 
-    interest = data.get("interest")
-    performance = data.get("performance")
-
-    if not interest or not performance:
-        return jsonify([])
-
-    result = recommend_career(interest, performance)
+    result = recommend_career(
+        interest,
+        skills,
+        academic_score,
+        performance
+    )
 
     return jsonify(result)
-
 if __name__ == "__main__":
     app.run(debug=True)
